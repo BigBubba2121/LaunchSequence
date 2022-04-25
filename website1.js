@@ -8,6 +8,12 @@ function printdocument(c){
     if (c === 0) {
         document.getElementById("text").innerHTML = "Blast Off!!!";
        }
+/* else if statement for 5 to display warning message */
+    else if(c === 5){ 
+        document.getElementById("warning").innerHTML = "Warning Less than 1/2 way to launch, time left = " + c + " Seconds Remaining!";
+        
+        document.getElementById("text").innerHTML = "5";
+    }
 /* else statement to ensure it displays countdown*/      
     else {
         document.getElementById("text").innerHTML = c;
