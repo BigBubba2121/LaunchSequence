@@ -33,15 +33,24 @@
     -ms-transform: translate(-50%,-50%);
 }
 
-#warningtext{
+/*half way mark warning message*/
+#warning{
     position: absolute;
     top: 50%;
-    left: 50%;
-    font-size: 80px;
+    left: 35%;
+    font-size: 25px;
     color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
 }
+
+/*overlay for the warning message*/
+.warningtext {
+    position: relative;
+    top: 25%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
 
 /*styling the body*/
 body {
@@ -113,6 +122,12 @@ img {
 <video autoplay muted loop id="myVideo">
   <source src="earth.mp4" type="video/mp4">
 </video>
+  
+<!--warning message overlay at top of page--> 
+ <div class="warningtext" >
+    <div id="warning"></div>
+</div> 
+  
 <!--button layout-->
 <div class="center">
   <button id="myBtn" onclick="start()">Start Countdown</button>
